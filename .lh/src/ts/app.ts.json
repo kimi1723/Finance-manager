@@ -1,0 +1,310 @@
+{
+    "sourceFile": "src/ts/app.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 73,
+            "patches": [
+                {
+                    "date": 1680048076459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680048084395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-console.log('elo');\r\n+const \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048221570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const \n\\ No newline at end of file\n+const addTransactionBtn = document.querySelector('.')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048228703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n-const addTransactionBtn = document.querySelector('.')\n\\ No newline at end of file\n+const addTransactionBtn = document.querySelector('.add-transaction');\r\n+const addTransactionBtn = document.querySelector('.add-transaction');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048234101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n const addTransactionBtn = document.querySelector('.add-transaction');\r\n-const addTransactionBtn = document.querySelector('.add-transaction');\n\\ No newline at end of file\n+const addTransactionBtn = document.querySelector('.delete-all');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048240261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n const addTransactionBtn = document.querySelector('.add-transaction');\r\n-const addTransactionBtn = document.querySelector('.delete-all');\n\\ No newline at end of file\n+const deleteAllBtn = document.querySelector('.delete-all');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048246025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-const addTransactionBtn = document.querySelector('.add-transaction');\r\n-const deleteAllBtn = document.querySelector('.delete-all');\n\\ No newline at end of file\n+const addTransactionBtn: HTMLButtonElement = document.querySelector('.add-transaction');\r\n+const deleteAllBtn: HTMLButtonElement = document.querySelector('.delete-all');\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048255032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n-const addTransactionBtn: HTMLButtonElement = document.querySelector('.add-transaction');\r\n-const deleteAllBtn: HTMLButtonElement = document.querySelector('.delete-all');\n\\ No newline at end of file\n+const addTransactionBtn:  = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n+const deleteAllBtn:  = document.querySelector('.delete-all') as HTMLButtonElement;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048314040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,7 @@\n-const addTransactionBtn:  = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n-const deleteAllBtn:  = document.querySelector('.delete-all') as HTMLButtonElement;\n\\ No newline at end of file\n+const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n+const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n+\r\n+\r\n+const showPanel = () => {\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048333444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n+const addTransactionPanel = document.querySelector('.add-transaction-panel')\r\n \r\n+const showPanel = () => {\r\n \r\n-const showPanel = () => {\r\n-    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048341333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n-const addTransactionPanel = document.querySelector('.add-transaction-panel')\r\n+const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const showPanel = () => {\r\n-\r\n+    add\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048349772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const showPanel = () => {\r\n-    add\r\n+    addTransactionPanel.classList.add('')\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048359944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const showPanel = () => {\r\n-    addTransactionPanel.classList.add('')\r\n+    addTransactionPanel.classList.add('add-transaction-panel--hidden')\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048368961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,7 @@\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const showPanel = () => {\r\n     addTransactionPanel.classList.add('add-transaction-panel--hidden')\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+addTransactionBtn.addEventListener('click', showPanel)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680048380313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const showPanel = () => {\r\n-    addTransactionPanel.classList.add('add-transaction-panel--hidden')\r\n-}\r\n+\taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n+};\r\n\\ No newline at end of file\n \r\n-addTransactionBtn.addEventListener('click', showPanel)\n+\r\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048412101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n+const\r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n \r\n\\ No newline at end of file\n-addTransactionBtn.addEventListener('click', showPanel);\n+\r\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048430991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n-const\r\n+const transactionName = document.querySelector('#name')\r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n \r\n \r\n\\ No newline at end of file\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048438334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n-const transactionName = document.querySelector('#name')\r\n+const transactionName = document.querySelector('#name');\r\n+const transactionC = document.querySelector('#name');\r\n+\r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n\\ No newline at end of file\n \r\n \r\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048446513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const transactionName = document.querySelector('#name');\r\n-const transactionC = document.querySelector('#name');\r\n+const transactionValue = document.querySelector('#amount');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n \r\n \r\n\\ No newline at end of file\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048453630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,14 @@\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const transactionName = document.querySelector('#name');\r\n-const transactionValue = document.querySelector('#amount');\r\n+const transactionAmount = document.querySelector('#amount');\r\n+const transaction = document.querySelector('#amount');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n \r\n\\ No newline at end of file\n \r\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048460782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const transactionName = document.querySelector('#name');\r\n const transactionAmount = document.querySelector('#amount');\r\n-const transaction = document.querySelector('#amount');\r\n+const transactionCategory = document.querySelector('#category');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n \r\n \r\n\\ No newline at end of file\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048466089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n-const transactionName = document.querySelector('#name');\r\n-const transactionAmount = document.querySelector('#amount');\r\n-const transactionCategory = document.querySelector('#category');\r\n+const transactionName = document.querySelector('#name' as HTML;\r\n+const transactionAmount = document.querySelector('#amount') as HTML;\r\n+const transactionCategory = document.querySelector('#category') as HTML;\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n\\ No newline at end of file\n \r\n \r\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048475089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,12 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n-const transactionName = document.querySelector('#name' as HTML;\r\n-const transactionAmount = document.querySelector('#amount') as HTML;\r\n-const transactionCategory = document.querySelector('#category') as HTML;\r\n-\r\n-const showPanel = () => {\r\n-\taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n+const transactionName = document.querySelector('#name' as HTMLInputElement;\r\n+const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n+const transactionCategory = document.querySelector('#category') as HTMLElemenonst showPanel = () =addTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n\\ No newline at end of file\n \r\n \r\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048484539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,13 @@\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const transactionName = document.querySelector('#name' as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n-const transactionCategory = document.querySelector('#category') as HTMLElemenonst showPanel = () =addTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n+const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n+\r\n+const showPanel = () => {\r\n+\taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n\\ No newline at end of file\n \r\n \r\n \r\n-addTransactionBtn.addEventListener('click', showPanel);\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048494816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n-const transactionName = document.querySelector('#name' as HTMLInputElement;\r\n+const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n const showPanel = () => {\r\n@@ -11,5 +11,5 @@\n };\r\n \r\n \r\n \r\n-addTransactionBtn.addEventListener('click', showPanel);\n\\ No newline at end of file\n+addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048528226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,12 @@\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n+const saveTransaction = document.querySelector('.save');\r\n+const saveTransaction = document.querySelector('.save');\r\n+\r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n-\r\n-\r\n addTransactionBtn.addEventListener('click', showPanel);\r\n"
+                },
+                {
+                    "date": 1680048535447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n const saveTransaction = document.querySelector('.save');\r\n-const saveTransaction = document.querySelector('.save');\r\n+const cancelTransaction = document.querySelector('.cancel');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048541516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n-const saveTransaction = document.querySelector('.save');\r\n-const cancelTransaction = document.querySelector('.cancel');\r\n+const saveTransactionAddition = document.querySelector('.save');\r\n+const cancelTransactionAddition = document.querySelector('.cancel');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048547729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n-const saveTransactionAddition = document.querySelector('.save');\r\n-const cancelTransactionAddition = document.querySelector('.cancel');\r\n+const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n+const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048580212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,10 @@\n \r\n const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n+const \r\n+\r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1680048592382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n \r\n const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n-const \r\n+const incomeArea = document.querySelector('.income-area');\r\n+const incomeArea = document.querySelector('.income-area');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048601787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const incomeArea = document.querySelector('.income-area');\r\n-const incomeArea = document.querySelector('.income-area');\r\n+const expenses = document.querySelector('.expenses-area');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048607789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \r\n const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n-const incomeArea = document.querySelector('.income-area');\r\n-const expenses = document.querySelector('.expenses-area');\r\n+const income = document.querySelector('.income-area') as HTML;\r\n+const expenses = document.querySelector('.expenses-area') as HTML;\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048619476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,10 @@\n \r\n const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n-const income = document.querySelector('.income-area') as HTML;\r\n-const expenses = document.querySelector('.expenses-area') as HTML;\r\n+const income = document.querySelector('.income-area') as HTMLDivElement;\r\n+const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048709289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n+const availableM\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048719860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n-const availableM\r\n+const availableMoney = document.querySelector('.available-monet')\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048728617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n-const availableMoney = document.querySelector('.available-monet')\r\n+const availableMoney = document.querySelector('.available-money');\r\n+const availableMoney = document.querySelector('.delete');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048734150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n const availableMoney = document.querySelector('.available-money');\r\n-const availableMoney = document.querySelector('.delete');\r\n+const deleteBtn = document.querySelector('.delete');\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048742297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n+const deleteBtn = document.querySelector('.delete') as HTMLButtonElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n@@ -11,10 +12,10 @@\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n const availableMoney = document.querySelector('.available-money');\r\n-const deleteBtn = document.querySelector('.delete');\r\n \r\n+\r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1680048756857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const deleteBtn = document.querySelector('.delete') as HTMLButtonElement;\r\n-const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n \r\n+\r\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n@@ -11,8 +11,9 @@\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n+const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n const availableMoney = document.querySelector('.available-money');\r\n \r\n \r\n const showPanel = () => {\r\n"
+                },
+                {
+                    "date": 1680048762170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n-const availableMoney = document.querySelector('.available-money');\r\n+const availableMoney = document.querySelector('.available-money') as HTMLDivElement;\r\n \r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680048768407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const deleteBtn = document.querySelector('.delete') as HTMLButtonElement;\r\n+const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n+const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n \r\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n-const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n-const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n"
+                },
+                {
+                    "date": 1680048834962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,19 +3,18 @@\n const deleteBtn = document.querySelector('.delete') as HTMLButtonElement;\r\n const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n-\r\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n \r\n-\r\n const income = document.querySelector('.income-area') as HTMLDivElement;\r\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n const availableMoney = document.querySelector('.available-money') as HTMLDivElement;\r\n \r\n+let categoryIcon, \r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048846602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n const expenses = document.querySelector('.expenses-area') as HTMLDivElement;\r\n const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;\r\n const availableMoney = document.querySelector('.available-money') as HTMLDivElement;\r\n \r\n-let categoryIcon, \r\n+let categoryIcon, selectedCategory;\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680048999204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n const availableMoney = document.querySelector('.available-money') as HTMLDivElement;\r\n \r\n let categoryIcon, selectedCategory;\r\n \r\n+const handleTransactionAddition = () => {}\r\n+\r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1680049004370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n const availableMoney = document.querySelector('.available-money') as HTMLDivElement;\r\n \r\n let categoryIcon, selectedCategory;\r\n \r\n-const handleTransactionAddition = () => {}\r\n+const handleTransactionAddition = () => {\r\n+    trans\r\n+}\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n"
+                },
+                {
+                    "date": 1680049024066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n let categoryIcon, selectedCategory;\r\n \r\n const handleTransactionAddition = () => {\r\n-    trans\r\n+    const transactionDiv \r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049032059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n let categoryIcon, selectedCategory;\r\n \r\n const handleTransactionAddition = () => {\r\n-    const transactionDiv \r\n+    const transactionDiv = document.createElement('div');\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049039116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n let categoryIcon, selectedCategory;\r\n \r\n const handleTransactionAddition = () => {\r\n     const transactionDiv = document.createElement('div');\r\n+    const transactionN\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049045812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n let categoryIcon, selectedCategory;\r\n \r\n const handleTransactionAddition = () => {\r\n     const transactionDiv = document.createElement('div');\r\n-    const transactionN\r\n+    const transactionHTMLName\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049055268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n let categoryIcon, selectedCategory;\r\n \r\n const handleTransactionAddition = () => {\r\n     const transactionDiv = document.createElement('div');\r\n-    const transactionHTMLName\r\n+    const transactionHTMLName = document.createElement('p');\r\n+\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049065556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n let categoryIcon, selectedCategory;\r\n \r\n const handleTransactionAddition = () => {\r\n     const transactionDiv = document.createElement('div');\r\n-    const transactionHTMLName = document.createElement('p');\r\n-\r\n+    const transactionPName = document.createElement('p');\r\n+    const transaction \r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049079613,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n const handleTransactionAddition = () => {\r\n     const transactionDiv = document.createElement('div');\r\n     const transactionPName = document.createElement('p');\r\n-    const transaction \r\n+    const transactionPAmount = document.createElement('p')\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049099663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,11 @@\n \r\n const handleTransactionAddition = () => {\r\n     const transactionDiv = document.createElement('div');\r\n     const transactionPName = document.createElement('p');\r\n-    const transactionPAmount = document.createElement('p')\r\n+    const transactionPAmount = document.createElement('p');\r\n+\r\n+    const transaction\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049105223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     const transactionDiv = document.createElement('div');\r\n     const transactionPName = document.createElement('p');\r\n     const transactionPAmount = document.createElement('p');\r\n \r\n-    const transaction\r\n+    const transactionIcon\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049113515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,10 @@\n     const transactionDiv = document.createElement('div');\r\n     const transactionPName = document.createElement('p');\r\n     const transactionPAmount = document.createElement('p');\r\n \r\n-    const transactionIcon\r\n+    const transactionIcon = document.createElement('i');\r\n+    const \r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049130490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     const transactionPName = document.createElement('p');\r\n     const transactionPAmount = document.createElement('p');\r\n \r\n     const transactionIcon = document.createElement('i');\r\n-    const \r\n+    const transactionDeleteButton = document.createElement('')\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049149093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n     const transactionPName = document.createElement('p');\r\n     const transactionPAmount = document.createElement('p');\r\n \r\n     const transactionIcon = document.createElement('i');\r\n-    const transactionDeleteButton = document.createElement('')\r\n+    const transactionDeleteButton = document.createElement('button');\r\n+    transactionDeleteButtonIcon = document.createElement('i')\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049154253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n     const transactionPAmount = document.createElement('p');\r\n \r\n     const transactionIcon = document.createElement('i');\r\n     const transactionDeleteButton = document.createElement('button');\r\n-    transactionDeleteButtonIcon = document.createElement('i')\r\n+    const transactionDeleteButtonIcon = document.createElement('i');\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049168743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,10 @@\n \r\n     const transactionIcon = document.createElement('i');\r\n     const transactionDeleteButton = document.createElement('button');\r\n     const transactionDeleteButtonIcon = document.createElement('i');\r\n+\r\n+    transactionPName.textContent = \r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049178429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,10 @@\n     const transactionIcon = document.createElement('i');\r\n     const transactionDeleteButton = document.createElement('button');\r\n     const transactionDeleteButtonIcon = document.createElement('i');\r\n \r\n-    transactionPName.textContent = \r\n+    transactionPName.textContent = transactionName.value;\r\n+    \r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049183625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     const transactionDeleteButton = document.createElement('button');\r\n     const transactionDeleteButtonIcon = document.createElement('i');\r\n \r\n     transactionPName.textContent = transactionName.value;\r\n-    \r\n+    transactionPAmount\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049188963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     const transactionDeleteButton = document.createElement('button');\r\n     const transactionDeleteButtonIcon = document.createElement('i');\r\n \r\n     transactionPName.textContent = transactionName.value;\r\n-    transactionPAmount\r\n+    transactionPAmount.textContent = \r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049220435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     const transactionDeleteButton = document.createElement('button');\r\n     const transactionDeleteButtonIcon = document.createElement('i');\r\n \r\n     transactionPName.textContent = transactionName.value;\r\n-    transactionPAmount.textContent = \r\n+    transactionPAmount.textContent = transactionAmount.value;\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049232118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,10 @@\n     const transactionDeleteButtonIcon = document.createElement('i');\r\n \r\n     transactionPName.textContent = transactionName.value;\r\n     transactionPAmount.textContent = transactionAmount.value;\r\n+\r\n+    transactionDiv.append(transactionPName)\r\n }\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049243274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,23 +15,25 @@\n \r\n let categoryIcon, selectedCategory;\r\n \r\n const handleTransactionAddition = () => {\r\n-    const transactionDiv = document.createElement('div');\r\n-    const transactionPName = document.createElement('p');\r\n-    const transactionPAmount = document.createElement('p');\r\n+\tconst transactionDiv = document.createElement('div');\r\n+\tconst transactionPName = document.createElement('p');\r\n+\tconst transactionPAmount = document.createElement('p');\r\n \r\n-    const transactionIcon = document.createElement('i');\r\n-    const transactionDeleteButton = document.createElement('button');\r\n-    const transactionDeleteButtonIcon = document.createElement('i');\r\n+\tconst transactionIcon = document.createElement('i');\r\n+\tconst transactionDeleteButton = document.createElement('button');\r\n+\tconst transactionDeleteButtonIcon = document.createElement('i');\r\n \r\n-    transactionPName.textContent = transactionName.value;\r\n-    transactionPAmount.textContent = transactionAmount.value;\r\n+\ttransactionPName.textContent = transactionName.value;\r\n+\ttransactionPAmount.textContent = transactionAmount.value;\r\n \r\n-    transactionDiv.append(transactionPName)\r\n-}\r\n+\ttransactionDiv.append(transactionPName);\r\n+\ttransactionDiv.append(transactionPAmount);\r\n+};\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n addTransactionBtn.addEventListener('click', showPanel);\r\n+\r\n"
+                },
+                {
+                    "date": 1680049249587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,5 @@\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n addTransactionBtn.addEventListener('click', showPanel);\r\n-\r\n+saveTransaction\r\n"
+                },
+                {
+                    "date": 1680049257220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,5 @@\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n addTransactionBtn.addEventListener('click', showPanel);\r\n-saveTransaction\r\n+saveTransactionAddition\r\n"
+                },
+                {
+                    "date": 1680049270002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,5 +35,5 @@\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n addTransactionBtn.addEventListener('click', showPanel);\r\n-saveTransactionAddition\r\n+saveTransactionAdditionBtn.addEventListener('click', handleTransactionAddition);\r\n"
+                },
+                {
+                    "date": 1680049278282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;\r\n const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;\r\n const deleteBtn = document.querySelector('.delete') as HTMLButtonElement;\r\n-const saveTransactionAddition = document.querySelector('.save') as HTMLButtonElement;\r\n-const cancelTransactionAddition = document.querySelector('.cancel') as HTMLButtonElement;\r\n+const saveTransactionAdditionBtn = document.querySelector('.save') as HTMLButtonElement;\r\n+const cancelTransactionAdditionBtn = document.querySelector('.cancel') as HTMLButtonElement;\r\n \r\n const transactionName = document.querySelector('#name') as HTMLInputElement;\r\n const transactionAmount = document.querySelector('#amount') as HTMLInputElement;\r\n const transactionCategory = document.querySelector('#category') as HTMLSelectElement;\r\n@@ -36,4 +36,5 @@\n };\r\n \r\n addTransactionBtn.addEventListener('click', showPanel);\r\n saveTransactionAdditionBtn.addEventListener('click', handleTransactionAddition);\r\n+;\r\n"
+                },
+                {
+                    "date": 1680049293268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,13 +28,14 @@\n \ttransactionPAmount.textContent = transactionAmount.value;\r\n \r\n \ttransactionDiv.append(transactionPName);\r\n \ttransactionDiv.append(transactionPAmount);\r\n+\r\n+    \r\n };\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n };\r\n \r\n addTransactionBtn.addEventListener('click', showPanel);\r\n saveTransactionAdditionBtn.addEventListener('click', handleTransactionAddition);\r\n-;\r\n"
+                },
+                {
+                    "date": 1680049302510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n \r\n \ttransactionDiv.append(transactionPName);\r\n \ttransactionDiv.append(transactionPAmount);\r\n \r\n-    \r\n+    addTransactionPanel.classList.add('add-transaction-panel--hidden')\r\n };\r\n \r\n const showPanel = () => {\r\n \taddTransactionPanel.classList.remove('add-transaction-panel--hidden');\r\n"
+                },
+                {
+                    "date": 1680049323732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n \ttransactionPAmount.textContent = transactionAmount.value;\r\n \r\n \ttransactionDiv.append(transactionPName);\r\n \ttransactionDiv.append(transactionPAmount);\r\n+    income.append(transactionDiv);\r\n \r\n \taddTransactionPanel.classList.add('add-transaction-panel--hidden');\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1680049411554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \ttransactionDiv.append(transactionPName);\r\n \ttransactionDiv.append(transactionPAmount);\r\n \tincome.append(transactionDiv);\r\n \r\n-    \r\n+    console.log(transactionCategory);\r\n \r\n \taddTransactionPanel.classList.add('add-transaction-panel--hidden');\r\n };\r\n \r\n"
+                }
+            ],
+            "date": 1680048076459,
+            "name": "Commit-0",
+            "content": "console.log('elo');\r\n"
+        }
+    ]
+}

@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap&subset=latin-ext"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/327a0d490c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <script src="https://kit.fontawesome.com/b106b5fdab.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,29 +27,11 @@
             <div class="transaction-list">
                 <div class="income-area">
                     <h3>Przychód:</h3>
-                    <!-- <div class="transaction" id="0">
-                        <p class="transaction-name"><i class="fas fa-money-bill-wave"></i> Wypłata</p>
-                        <p class="transaction-amount">2000zł <button class="delete"><i
-                                    class="fas fa-times"></i></button></p>
-                    </div> -->
+
                 </div>
                 <div class="expenses-area">
                     <h3>Wydatki:</h3>
-                    <!-- <div class="transaction" id="1">
-                        <p class="transaction-name"><i class="fas fa-cart-arrow-down"></i> Zakupy</p>
-                        <p class="transaction-amount">-400zł <button class="delete"><i
-                                    class="fas fa-times"></i></button></p>
-                    </div>
-                    <div class="transaction" id="2">
-                        <p class="transaction-name"><i class="fas fa-hamburger"></i> Jedzenie</p>
-                        <p class="transaction-amount">-100zł <button class="delete"><i
-                                    class="fas fa-times"></i></button></p>
-                    </div>
-                    <div class="transaction" id="3">
-                        <p class="transaction-name"><i class="fas fa-film"></i> Kino</p>
-                        <p class="transaction-amount">-50zł <button class="delete"><i class="fas fa-times"></i></button>
-                        </p>
-                    </div> -->
+
                 </div>
             </div>
         </section>
@@ -72,7 +55,7 @@
         </section>
     </main>
 
-    <div class="add-transaction-panel">
+    <div class="add-transaction-panel add-transaction-panel--hidden">
         <h2 class="title">Dodaj nową transakcję</h2>
         <label for="name">Nazwa:</label>
         <small>(podaj nazwę transakcji)</small>
@@ -84,12 +67,12 @@
 
         <label for="category">Wybierz kategorię:</label>
         <small>( [ + ] oznacza przychód, [ - ] oznacza wydatek)</small>
-        <select id="category" onchange="selectCategory()">
+        <select id="category">
             <option value="none" selected disabled></option>
-            <option value="income">[ + ] Przychód</option>
-            <option value="shopping">[ - ] Zakupy</option>
-            <option value="food">[ - ] Jedzenie</option>
-            <option value="cinema">[ - ] Kino</option>
+            <option value="income" data-name="Przychód">[ + ] Przychód</option>
+            <option value="shopping" data-name="Zakupy">[ - ] Zakupy</option>
+            <option value="food" data-name="Jedzenie">[ - ] Jedzenie</option>
+            <option value="cinema" data-name="Kino">[ - ] Kino</option>
         </select>
 
         <div class="panel-buttons">
@@ -101,7 +84,7 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="/dist/js/app.min.js"></script>
 </body>
 
 </html>
