@@ -10,6 +10,10 @@ const transactionCategory = document.querySelector('#category') as HTMLSelectEle
 const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;
 const availableMoney = document.querySelector('.available-money') as HTMLDivElement;
 
+const html: HTMLElement = document.documentElement;
+const lightStyleBtn = document.querySelector('.light') as HTMLButtonElement;
+const darkStyleBtn = document.querySelector('.dark') as HTMLButtonElement;
+
 const addTransaction = (): void => {
 	const numberRE = /^[+-]?\d+(\.\d+)?$/;
 
@@ -147,7 +151,21 @@ const calculateAvailableMoneyAmount = (): void => {
 	availableMoney.textContent = `${availableMoneyAmount.toFixed(2).toString()}zł`;
 };
 
+const changeToLightStyle = (): void => {
+	html.style.setProperty('--first-color', '#F9F9F9');
+	html.style.setProperty('--second-color', '#14161F');
+	html.style.setProperty('--border-color', 'rgba(0,0,0, 0.2');
+};
+const changeToDarkStyle = (): void => {
+	html.style.setProperty('--first-color', '#14161F');
+	html.style.setProperty('--second-color', '#F9F9F9');
+	html.style.setProperty('--border-color', 'rgba(255,255,255, 0.2');
+};
+
 showTransactionAdditionPanelBtn.addEventListener('click', showPanel);
 saveTransactionAdditionBtn.addEventListener('click', addTransaction);
 deleteAllBtn.addEventListener('click', deleteAllRecords);
 cancelTransactionAdditionBtn.addEventListener('click', cancelTransactionAddition);
+
+lightStyleBtn.addEventListener('click', changeToLightStyle);
+darkStyleBtn.addEventListener('click', changeToDarkStyle);
