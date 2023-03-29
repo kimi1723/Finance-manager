@@ -13,70 +13,78 @@ const expenses = document.querySelector('.expenses-area') as HTMLDivElement;
 const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;
 const availableMoney = document.querySelector('.available-money') as HTMLDivElement;
 
-const handleTransactionAddition = () => {
-	const transactionDiv = document.createElement('div');
-	const transactionNameP = document.createElement('p');
-	const transactionNameSpan = document.createElement('span');
-	const transactionAmountP = document.createElement('p');
+const handleTransactionAddition = (): void => {
+	const numberRE = /^[+-]?\d+(\.\d+)?$/;
 
-	const transactionIcon = document.createElement('i');
-	const transactionDeleteButton = document.createElement('button');
-	const transactionDeleteButtonIcon = document.createElement('i');
+	if (transactionName.value !== '' && transactionAmount.value !== '' && transactionAmount.value.match(numberRE)) {
+		const transactionDiv: HTMLDivElement = document.createElement('div');
+		const transactionNameP: HTMLParagraphElement = document.createElement('p');
+		const transactionNameSpan: HTMLSpanElement = document.createElement('span');
+		const transactionAmountP: HTMLParagraphElement = document.createElement('p');
 
-	const selectedCategoryIndex = transactionCategory.options.selectedIndex;
+		const transactionIcon: HTMLElement = document.createElement('i');
+		const transactionDeleteButton: HTMLButtonElement = document.createElement('button');
+		const transactionDeleteButtonIcon: HTMLElement = document.createElement('i');
 
-	let amountPrefix;
+		const selectedCategoryIndex: number = transactionCategory.options.selectedIndex;
 
-	if (selectedCategoryIndex === 1) {
-		console.log(transactionCategory.options[selectedCategoryIndex]);
-		transactionIcon.classList.add('fas', 'fa-money-bill-wave');
+		let amountPrefix: string;
 
-		transactionNameP.append(transactionIcon);
-		income.append(transactionDiv);
+		if (selectedCategoryIndex === 1) {
+			transactionIcon.classList.add('fas', 'fa-money-bill-wave');
 
-		amountPrefix = '';
-	} else {
-		amountPrefix = '-';
-		switch (selectedCategoryIndex) {
-			case 2:
-				transactionIcon.classList.add('fas', 'fa-cart-arrow-down');
-				transactionNameP.append(transactionIcon);
-				break;
+			transactionNameP.append(transactionIcon);
+			income.append(transactionDiv);
 
-			case 3:
-				transactionIcon.classList.add('fas', 'fa-hamburger');
-				transactionNameP.append(transactionIcon);
-				break;
+			amountPrefix = '+';
+		} else {
+			amountPrefix = '-';
 
-			case 4:
-				transactionIcon.classList.add('fas', 'fa-film');
-				transactionNameP.append(transactionIcon);
-				break;
+			switch (selectedCategoryIndex) {
+				case 2:
+					transactionIcon.classList.add('fas', 'fa-cart-arrow-down');
+					transactionNameP.append(transactionIcon);
+					break;
+
+				case 3:
+					transactionIcon.classList.add('fas', 'fa-hamburger');
+					transactionNameP.append(transactionIcon);
+					break;
+
+				case 4:
+					transactionIcon.classList.add('fas', 'fa-film');
+					transactionNameP.append(transactionIcon);
+					break;
+			}
+			expenses.append(transactionDiv);
 		}
-		expenses.append(transactionDiv);
+
+		transactionNameSpan.textContent = transactionName.value;
+		transactionAmountP.textContent = `${amountPrefix}${transactionAmount.value}zł`;
+
+		transactionDeleteButton.classList.add('delete');
+		transactionDeleteButtonIcon.classList.add('fas', 'fa-times');
+		transactionDeleteButton.append(transactionDeleteButtonIcon);
+		transactionAmountP.append(transactionDeleteButton);
+
+		transactionNameP.classList.add('transaction-name');
+		transactionAmountP.classList.add('transaction-amount');
+		transactionDiv.classList.add('transaction');
+
+		transactionNameP.append(transactionNameSpan);
+		transactionDiv.append(transactionNameP);
+		transactionDiv.append(transactionAmountP);
+
+		closePanel();
 	}
-
-	transactionNameSpan.textContent = transactionName.value;
-	transactionAmountP.textContent = `${amountPrefix}${transactionAmount.value}zł`;
-
-	transactionDeleteButton.classList.add('delete');
-	transactionDeleteButtonIcon.classList.add('fas', 'fa-times');
-	transactionDeleteButton.append(transactionDeleteButtonIcon);
-	transactionAmountP.append(transactionDeleteButton);
-
-	transactionNameP.classList.add('transaction-name');
-	transactionAmountP.classList.add('transaction-amount');
-	transactionDiv.classList.add('transaction');
-
-	transactionNameP.append(transactionNameSpan);
-	transactionDiv.append(transactionNameP);
-	transactionDiv.append(transactionAmountP);
-
-	addTransactionPanel.classList.add('add-transaction-panel--hidden');
 };
 
-const showPanel = () => {
+const showPanel = (): void => {
 	addTransactionPanel.classList.remove('add-transaction-panel--hidden');
+};
+
+const closePanel = (): void => {
+	addTransactionPanel.classList.add('add-transaction-panel--hidden');
 };
 
 addTransactionBtn.addEventListener('click', showPanel);
