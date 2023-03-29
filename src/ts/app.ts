@@ -1,6 +1,5 @@
-const addTransactionBtn = document.querySelector('.add-transaction') as HTMLButtonElement;
+const showTransactionAdditionPanelBtn = document.querySelector('.add-transaction') as HTMLButtonElement;
 const deleteAllBtn = document.querySelector('.delete-all') as HTMLButtonElement;
-const deleteBtn = document.querySelector('.delete') as HTMLButtonElement;
 const saveTransactionAdditionBtn = document.querySelector('.save') as HTMLButtonElement;
 const cancelTransactionAdditionBtn = document.querySelector('.cancel') as HTMLButtonElement;
 
@@ -13,7 +12,10 @@ const expenses = document.querySelector('.expenses-area') as HTMLDivElement;
 const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;
 const availableMoney = document.querySelector('.available-money') as HTMLDivElement;
 
-const handleTransactionAddition = (): void => {
+let positiveMoney: number[] = [],
+	negativeMoney: number[] = [];
+
+const addTransaction = (): void => {
 	const numberRE = /^[+-]?\d+(\.\d+)?$/;
 
 	if (transactionName.value !== '' && transactionAmount.value !== '' && transactionAmount.value.match(numberRE)) {
@@ -37,8 +39,11 @@ const handleTransactionAddition = (): void => {
 			income.append(transactionDiv);
 
 			amountPrefix = '+';
+
+			positiveMoney.push(Number(transactionAmount.value));
 		} else {
 			amountPrefix = '-';
+			negativeMoney.push(Number(transactionAmount.value));
 
 			switch (selectedCategoryIndex) {
 				case 2:
@@ -70,13 +75,49 @@ const handleTransactionAddition = (): void => {
 		transactionNameP.classList.add('transaction-name');
 		transactionAmountP.classList.add('transaction-amount');
 		transactionDiv.classList.add('transaction');
+		transactionDiv.addEventListener('click', deleteRecord);
 
 		transactionNameP.append(transactionNameSpan);
 		transactionDiv.append(transactionNameP);
 		transactionDiv.append(transactionAmountP);
 
 		closePanel();
+		// clearInputs();
+		calculateAvailableMoneyAmount();
 	}
+};
+
+const cancelTransactionAddition = (): void => {
+	closePanel();
+	clearInputs();
+};
+
+const deleteRecord = (e: Event): void => {
+	const target = e.target as HTMLElement;
+
+	if (target.classList.contains('delete') || target.classList.contains('fas')) {
+		const transactionDiv = e.currentTarget as HTMLDivElement;
+
+		transactionDiv.remove();
+	
+		calculateAvailableMoneyAmount();
+	}
+};
+
+const deleteAllRecords = (): void => {
+	const transactions = document.querySelectorAll('.transaction');
+
+	transactions.forEach(transaction => {
+		transaction.remove();
+	});
+
+	calculateAvailableMoneyAmount();
+};
+
+const clearInputs = (): void => {
+	transactionName.value = '';
+	transactionAmount.value = '';
+	transactionCategory.selectedIndex = 1;
 };
 
 const showPanel = (): void => {
@@ -87,5 +128,17 @@ const closePanel = (): void => {
 	addTransactionPanel.classList.add('add-transaction-panel--hidden');
 };
 
-addTransactionBtn.addEventListener('click', showPanel);
-saveTransactionAdditionBtn.addEventListener('click', handleTransactionAddition);
+const calculateAvailableMoneyAmount = () => {
+	let availableMoneyAmount: number = 0;
+
+	positiveMoney.forEach(amount => (availableMoneyAmount += amount));
+
+	negativeMoney.forEach(amount => (availableMoneyAmount -= amount));
+
+	availableMoney.textContent = availableMoneyAmount.toFixed(2).toString();
+};
+
+showTransactionAdditionPanelBtn.addEventListener('click', showPanel);
+saveTransactionAdditionBtn.addEventListener('click', addTransaction);
+deleteAllBtn.addEventListener('click', deleteAllRecords);
+cancelTransactionAdditionBtn.addEventListener('click', cancelTransactionAddition);
