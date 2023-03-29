@@ -7,13 +7,8 @@ const transactionName = document.querySelector('#name') as HTMLInputElement;
 const transactionAmount = document.querySelector('#amount') as HTMLInputElement;
 const transactionCategory = document.querySelector('#category') as HTMLSelectElement;
 
-const income = document.querySelector('.income-area') as HTMLDivElement;
-const expenses = document.querySelector('.expenses-area') as HTMLDivElement;
 const addTransactionPanel = document.querySelector('.add-transaction-panel') as HTMLDivElement;
 const availableMoney = document.querySelector('.available-money') as HTMLDivElement;
-
-let positiveMoney: number[] = [],
-	negativeMoney: number[] = [];
 
 const addTransaction = (): void => {
 	const numberRE = /^[+-]?\d+(\.\d+)?$/;
@@ -33,17 +28,20 @@ const addTransaction = (): void => {
 		let amountPrefix: string;
 
 		if (selectedCategoryIndex === 1) {
+			const income = document.querySelector('.income-area') as HTMLDivElement;
+
 			transactionIcon.classList.add('fas', 'fa-money-bill-wave');
 
 			transactionNameP.append(transactionIcon);
 			income.append(transactionDiv);
+			transactionDiv.setAttribute('data-positive-amount', transactionAmount.value);
 
 			amountPrefix = '+';
-
-			positiveMoney.push(Number(transactionAmount.value));
 		} else {
+			const expenses = document.querySelector('.expenses-area') as HTMLDivElement;
 			amountPrefix = '-';
-			negativeMoney.push(Number(transactionAmount.value));
+
+			transactionDiv.setAttribute('data-negative-amount', transactionAmount.value);
 
 			switch (selectedCategoryIndex) {
 				case 2:
@@ -75,6 +73,7 @@ const addTransaction = (): void => {
 		transactionNameP.classList.add('transaction-name');
 		transactionAmountP.classList.add('transaction-amount');
 		transactionDiv.classList.add('transaction');
+
 		transactionDiv.addEventListener('click', deleteRecord);
 
 		transactionNameP.append(transactionNameSpan);
@@ -82,7 +81,7 @@ const addTransaction = (): void => {
 		transactionDiv.append(transactionAmountP);
 
 		closePanel();
-		// clearInputs();
+		clearInputs();
 		calculateAvailableMoneyAmount();
 	}
 };
@@ -99,7 +98,7 @@ const deleteRecord = (e: Event): void => {
 		const transactionDiv = e.currentTarget as HTMLDivElement;
 
 		transactionDiv.remove();
-	
+
 		calculateAvailableMoneyAmount();
 	}
 };
@@ -117,7 +116,7 @@ const deleteAllRecords = (): void => {
 const clearInputs = (): void => {
 	transactionName.value = '';
 	transactionAmount.value = '';
-	transactionCategory.selectedIndex = 1;
+	transactionCategory.selectedIndex = 0;
 };
 
 const showPanel = (): void => {
@@ -128,14 +127,24 @@ const closePanel = (): void => {
 	addTransactionPanel.classList.add('add-transaction-panel--hidden');
 };
 
-const calculateAvailableMoneyAmount = () => {
+const calculateAvailableMoneyAmount = (): void => {
+	const positiveMoneyNodeList: NodeListOf<HTMLDataElement> = document.querySelectorAll('[data-positive-amount]');
+	const negativeMoneyNodeList: NodeListOf<HTMLDataElement> = document.querySelectorAll('[data-negative-amount]');
 	let availableMoneyAmount: number = 0;
 
-	positiveMoney.forEach(amount => (availableMoneyAmount += amount));
+	positiveMoneyNodeList.forEach((amount: HTMLDataElement) => {
+		if (Number(amount.dataset.positiveAmount) != 0) {
+			availableMoneyAmount += Number(amount.dataset.positiveAmount);
+		}
+	});
 
-	negativeMoney.forEach(amount => (availableMoneyAmount -= amount));
+	negativeMoneyNodeList.forEach((amount: HTMLDataElement) => {
+		if (Number(amount.dataset.negativeAmount) != 0) {
+			availableMoneyAmount -= Number(amount.dataset.negativeAmount);
+		}
+	});
 
-	availableMoney.textContent = availableMoneyAmount.toFixed(2).toString();
+	availableMoney.textContent = `${availableMoneyAmount.toFixed(2).toString()}zł`;
 };
 
 showTransactionAdditionPanelBtn.addEventListener('click', showPanel);
